@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang ="en">
+<!--*** 
+Author 	        Fan WANG 
+Date written 	29/5/2018 
+Notes 	        This file is an assessment for JavaScript class
+--> 
+<head> 
+<title>Retangle Conflict</title>
+<meta charset = "utf-8"/>
+<!--<link rel ="stylesheet" href = "../css/jsassessment.css" type="text/css"/>--->
+<script src = "../js/checkData.js" type = "text/javascript"></script>
+<script src = "../js/redir.js" type = "text/javascript"></script>
+<script src = "../js/colorSettings.js" type = "text/javascript"></script>
+
+
+</head>
+<body>
+
+<table>
+    <tr>
+	    <td></td>
+        <td><img src = "../image/video_game_controls_Up.png" width = "30" height = "30" alt = "UP" onclick = "movingUp()"/></td>
+        <td></td>
+	</tr>
+    <tr>
+        <td><img src = "../image/video_game_controls_Left.png" width = "30" height = "30" alt = "LEFT" onclick = "movingLeft()"/></td>
+        <td></td>
+		<td><img src = "../image/video_game_controls_Right.png" width = "30" height = "30" alt = "RIGHT" onclick = "movingRight()"/></td>
+	</tr>
+	<tr>
+	    <td></td>
+        <td><img src = "../image/video_game_controls_Down.png" width = "30" height = "30" alt = "DOWN" onclick = "movingDown()"/></td>
+        <td></td>
+	</tr>
+</table>
+
+<div id = "playzone">
+    <div id = "beauty"><img src = "../image/beauty.jpg" width = "40" height = "40" alt = "beauty" />
+	</div>
+    <div id = "beast"><img src = "../image/beast.jpg" width = "40" height = "40" alt = "beast" />
+	</div>
+
+</div>
+<!--- click the button to start the   --->
+<button onclick = "setInterval(beauty.prototype.move(),1000)">GAME START</button>
+</body>
+</html>
