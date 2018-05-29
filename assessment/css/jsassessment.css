@@ -1,0 +1,13 @@
+form.orderform{
+background-color:#FFFFCC;
+width: 50%;
+max-width:1260px;
+min-width: 780px;
+margin: auto;
+
+}
+
+input:focus{
+    background-color: #FFFFCC;
+}
+
