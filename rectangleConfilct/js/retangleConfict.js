@@ -1,3 +1,4 @@
+
 function isPositive(x) {
 	if(x>0)
 		return 1;
@@ -12,12 +13,14 @@ function location (x,y) {
 	this.y = y;
 }
 
+
+/*
 function retangle (location) {
 	left = location.x - Math.ceil(this.style.width / 2);
 	right = location.x + Math.ceil(this.style.width / 2);
 	ceiling = location.y + Math.ceil(this.style.height /2);
 	floor = location.y - Math.ceil(this.style.height /2);
-}
+}*/
 
 function isDestinationArrived() {
 	if((Math.abs(destination.x - beauty.x) < beauty.style.width)&& (Math.abs(destination.y - beauty.y) < beauty.style.height))
@@ -26,7 +29,7 @@ function isDestinationArrived() {
 		return false;
 }
 
-var beauty() = new location ();
+
 beauty.prototype.move = function() {
 	var direction;    //set the direction of the movement, 0 for x, 1 for y
 	if( (this.x!= destination.x) && (this.y! = destination.y)) {
@@ -45,11 +48,13 @@ beauty.prototype.move = function() {
 	}
 	else
 		window.alert("Beauty has escaped to");
-			
+	
+	this.style.left = this.x;
+	this.style.top = this.y;
 } 
 
 
-var beast() = new retangle ();
+//var beast() = new retangle ();
 
 
 

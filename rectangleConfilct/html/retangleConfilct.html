@@ -3,15 +3,13 @@
 <!--*** 
 Author 	        Fan WANG 
 Date written 	29/5/2018 
-Notes 	        This file is an assessment for JavaScript class
+Notes 	        This file is a practice for JavaScript 
 --> 
 <head> 
 <title>Retangle Conflict</title>
 <meta charset = "utf-8"/>
 <!--<link rel ="stylesheet" href = "../css/jsassessment.css" type="text/css"/>--->
-<script src = "../js/checkData.js" type = "text/javascript"></script>
-<script src = "../js/redir.js" type = "text/javascript"></script>
-<script src = "../js/colorSettings.js" type = "text/javascript"></script>
+
 
 
 </head>
@@ -35,14 +33,19 @@ Notes 	        This file is an assessment for JavaScript class
 	</tr>
 </table>
 
-<div id = "playzone">
-    <div id = "beauty"><img src = "../image/beauty.jpg" width = "40" height = "40" alt = "beauty" />
+
+    <div id = "beauty"><img src = "../image/beauty.jpg" width = "40" height = "40" alt = "beauty" style = "position:abosolute" />
 	</div>
-    <div id = "beast"><img src = "../image/beast.jpg" width = "40" height = "40" alt = "beast" />
+    <div id = "beast"><img src = "../image/beast.jpg" width = "40" height = "40" alt = "beast" style = "position:abosolute"/>
 	</div>
 
-</div>
-<!--- click the button to start the   --->
+<canvas id = "playzone">
+</canvas>
+
+<script src = "../js/senarioInitialise.js"></script>
+<!--- 
+click the button to start the 
 <button onclick = "setInterval(beauty.prototype.move(),1000)">GAME START</button>
+  --->
 </body>
 </html>
