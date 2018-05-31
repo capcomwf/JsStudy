@@ -1,3 +1,7 @@
+var beauty = document.getElementById("beauty");
+beauty.style.left = 0;
+beauty.style.top = Math.random(document.getElementById("playzone").style.height);
+var BEAUTYSPEED = 10;
 
 function isPositive(x) {
 	if(x>0)
@@ -13,6 +17,7 @@ function location (x,y) {
 	this.y = y;
 }
 
+var destination = new location(200,300);
 
 /*
 function retangle (location) {
@@ -30,7 +35,7 @@ function isDestinationArrived() {
 }
 
 
-beauty.prototype.move = function() {
+beauty.move = function() {
 	var direction;    //set the direction of the movement, 0 for x, 1 for y
 	if( (this.x!= destination.x) && (this.y! = destination.y)) {
 	   	direction = (Math.random(1) < 0.5);
