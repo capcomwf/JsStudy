@@ -9,41 +9,46 @@ Notes 	        This file is a practice for JavaScript
 <title>Retangle Conflict</title>
 <meta charset = "utf-8"/>
 <!--<link rel ="stylesheet" href = "../css/jsassessment.css" type="text/css"/>--->
+<style>
+#playzone {
+width:500px;
+height:500px;
 
-<script src = "../js/retangleConflict.js" type = "text/javascript"></script>
-
+}
+</style>
+<script src = "../js/senarioInitialise.js" type = "text/javascript"></script>
 </head>
-<body>
+<body onload = "initialise()">
 
 <table>
     <tr>
 	    <td></td>
-        <td><img src = "../image/video_game_controls_Up.png" width = "30" height = "30" alt = "UP" onclick = "movingUp()"/></td>
+        <td><img src = "../image/video_game_controls_Up.png" width = "30" height = "30" alt = "UP" onclick = "BeastMovingUp()"/></td>
         <td></td>
 	</tr>
     <tr>
-        <td><img src = "../image/video_game_controls_Left.png" width = "30" height = "30" alt = "LEFT" onclick = "movingLeft()"/></td>
+        <td><img src = "../image/video_game_controls_Left.png" width = "30" height = "30" alt = "LEFT" onclick = "BeastMovingLeft()"/></td>
         <td></td>
-		<td><img src = "../image/video_game_controls_Right.png" width = "30" height = "30" alt = "RIGHT" onclick = "movingRight()"/></td>
+		<td><img src = "../image/video_game_controls_Right.png" width = "30" height = "30" alt = "RIGHT" onclick = "BeastMovingRight()"/></td>
 	</tr>
 	<tr>
 	    <td></td>
-        <td><img src = "../image/video_game_controls_Down.png" width = "30" height = "30" alt = "DOWN" onclick = "movingDown()"/></td>
+        <td><img src = "../image/video_game_controls_Down.png" width = "30" height = "30" alt = "DOWN" onclick = "BeastMovingDown()"/></td>
         <td></td>
 	</tr>
 </table>
 
 
-    <div id = "beauty"><img src = "../image/beauty.jpg" width = "40" height = "40" alt = "beauty" style = "position:abosolute" />
+    <div id = "beauty" style = "position:absolute" ><img src = "../image/beauty.jpg" width = "40" height = "40" alt = "beauty"  />
 	</div>
-    <div id = "beast"><img src = "../image/beast.jpg" width = "40" height = "40" alt = "beast" style = "position:abosolute"/>
+    <div id = "beast" style = "position:absolute" ><img src = "../image/beast.jpg" width = "40" height = "40" alt = "beast" />
 	</div>
 
 <canvas id = "playzone">
 </canvas>
 
-<script src = "../js/senarioInitialise.js"></script>
-<button onclick = "setInterval(beauty.move(),1000)">GAME START</button>
+<script src = "../js/retangleConflict.js" type = "text/javascript"></script>
+<button onclick = "Gamestart()">GAME START</button>
 <!--- 
 click the button to start the 
 

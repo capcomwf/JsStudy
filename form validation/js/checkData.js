@@ -1,7 +1,7 @@
 function checkData() {
 	var inputItems = document.getElementsByTagName("input");
     var itemAllOK = 1;
-	var txt = "";
+	//var txt = "";
 	
 	var inputEmailAddress = document.getElementsByName("Email")[0].value;
 	var emailPatt = /^([a-zA-Z0-9_-]+\.)*[a-zA-Z0-9_-]+@([a-zA-Z0-9_-]+\.)+[a-zA-Z0-9_-]+$/gi;  //^(\w+\.)*\w+@(\w+\.)+\w+$/; 
@@ -72,14 +72,24 @@ function checkData() {
 		return false;
 	}
 	
-	else if(document.getElementsByName("expiryYear")[0].value == currentDate.getFullYear()) {
+
+	else if((document.getElementsByName("expiryYear")[0].value == currentDate.getFullYear()) && (document.getElementsByName("expiryMonth")[0].value < (currentDate.getMonth()+1))) {   
+		alert("Your credit card has expired!");
+		return false;
+	}
+	/*
+	else if(document.getElementsByName("expiryYear")[0].value == currentDate.getFullYear()) {   
 	    if(document.getElementsByName("expiryMonth")[0].value < (currentDate.getMonth()+1)) {
 		alert("Your credit card has expired!");
 		return false;
-	    }
+		}
+		else {
+			console.log("y?");
+		}
 	}
-	
-	else if(itemAllOK) {
+	*/
+		
+	else {
 	alert("Information submitted!");
 	return true;
 	}
